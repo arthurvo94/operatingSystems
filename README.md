@@ -1,7 +1,7 @@
 # operatingSystems
 Collection of course projects demonstrating core concepts and simulating operations performed by operating systems
 
-Note: each project contains a corresponding **_makefile_**
+Note: each project contains a corresponding **_makefile_** to compile program with all dependencies
 
 ## assignment-1 – Dictionary Tree
 * Implemented a **pointer tree data structure** with the following operations:
