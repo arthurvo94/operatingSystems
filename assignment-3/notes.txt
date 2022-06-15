@@ -1,0 +1,49 @@
+possibly include destructor
+
+fix negative shit
+
+COUT EVERYWHERE AHHHHH
+ 
+// PRINT ARGS
+    // for(int i = 0; i < argc; i++){
+    //     cout << argv[i] << " ";
+    // }
+    // cout << endl;
+
+pageTable->rootLevelPtr->nextLevelPtr[i]
+
+
+for(int i = 0; i < pageTable->entryCount[0]; i++){
+        cout << pageTable->rootLevelPtr->nextLevelPtr[i] << endl;
+    }
+
+ uint32_t addr = 0xFEFFFEC2;
+
+    cout << "lookup: " << pageLookup(pageTable, addr) << endl;
+    pageInsert(pageTable, addr, 3);
+
+    LeafMap* mapPtr = pageLookup(pageTable, addr);
+    cout << "frame: " << mapPtr[0xFE].frame << endl;
+
+
+bitmasks            DONE
+virtual2physical    DONE
+v2p_tlb_pt
+vpn2pfn             DONE
+offset              DONE
+summary
+
+uint32_t def = 0xFFFFFFFF;
+    uint32_t offsetMask = 0x0001FFFF;
+    uint32_t pageMask = def ^ offsetMask;
+    
+    uint32_t addr = 0x00008715;
+    
+    uint32_t VPN = (addr & pageMask) >> 17;
+    uint32_t PFN = 0xE;
+    uint32_t offset = addr & offsetMask;
+    
+    uint32_t pAddr = (PFN << 17) + offset;
+    
+    printf("%08X\n", pAddr);
+    fflush(stdout);

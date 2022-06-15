@@ -1,0 +1,24 @@
+//initialize array pointers
+    execData->numOfCharsProcessedFromFile[DICTSRCFILEINDEX] = new long;
+    execData->numOfCharsProcessedFromFile[TESTFILEINDEX] = new long;
+
+    *execData->numOfCharsProcessedFromFile[DICTSRCFILEINDEX] = 50;  //GOOD
+    *execData->numOfCharsProcessedFromFile[TESTFILEINDEX] = 69;
+
+    cout << *execData->numOfCharsProcessedFromFile[DICTSRCFILEINDEX] << endl;
+    cout << *execData->numOfCharsProcessedFromFile[TESTFILEINDEX] << endl;
+
+
+
+    ------#------#
+
+    display '-' every 1/numOfProgressMarks
+
+
+
+
+   else if(i != execData->numOfProgressMarks) 
+
+
+
+   ./dicttest dictionarysource.txt  testfile1.txt -p 40 -h 5 -n 3
