@@ -14,7 +14,7 @@ Note: each project contains a corresponding **_makefile_** to compile program wi
   * Outputs each word from secondary source along with number of times that word appears as a prefix in the tree
 
 ## assignment-2 – Dictionary Tree – Thread Communication
-#### Objective: Gain familiarity with POSIX threads and using shared data to facilitate thread communication
+#### Objective: Gain familiarity with POSIX threads and using shared data to facilitate thread communication.
 * Implemented the pointer tree data structure and operations from **assignment-1** using POSIX threads to carry out operations in a concurrent fashion
 * Threads are required to communicate and coordinate with one another via a shared data structure, passed to each thread through pointers
 * Functionality:
@@ -32,4 +32,10 @@ Note: each project contains a corresponding **_makefile_** to compile program wi
     * In case of TLB miss (mapping not found in TLB), walk the page table to find mapping (or create mapping if page table misses) and add mapping to TLB. If TLB is full, apply LRU (Least Recently Used) Policy
 
 ## assignment-4 – Real-Time Messaging for Ridesharing app
-#### Understand the fundamentals of inter-process communication by solving the famous Producer/Consumer problem
+#### Objective: Understand the fundamentals of synchronization in inter-process communication by solving the famous Producer/Consumer problem
+* Created a rideshare messaging system simulating the producer/consumer problem, using POSIX unnamed semaphores and POSIX threads
+* Used a mutex semaphore to grant access rights to critical regions, counting semaphores to synchronize production and consumption of requests, and a barrier semaphore to guarantee a proper order of execution between threads
+* Functionality:
+  * Main thread spawns two producer and two consumer threads simultaneously, respectively producing and consuming ride share requests until a specified number of requests have been consumed
+    * Producers publish rideshare requests to a shared buffer whenever an empty space exists
+    * Conusmers consume requests from shared buffer whenever it is not empty
